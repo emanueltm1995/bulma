@@ -1,0 +1,17 @@
+<header style="background-color: #0509a5;color:white;text-align: center;font-size: 30px;">
+		<h1>Datos Bootstrap</h1>
+</header>
+<table class="table" style="margin: 0 auto; width: 50%;margin-top: 30px;">
+	<%@usuarios.each do |i|%>
+		<tr>
+			<td><%=i.id%></td>
+			<td><%=i.name%></td>
+			<td><%=i.l_name%></td>
+			<td><%=i.created_at.to_s[0..10]%></td>
+		</tr>
+	<%end%>
+</table>
+<div class="panel clearfix" align="center">
+    <%= link_to 'Volver', :back %>
+    <a class="button left">Cancelar</a>
+</div>
